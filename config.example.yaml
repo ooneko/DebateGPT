@@ -1,0 +1,7 @@
+# OpenAI API配置
+api:
+  endpoint: "" # api url of openai
+  key: ""
+  model: ""
+  max_tokens: 10000
+  timeout: 60s
