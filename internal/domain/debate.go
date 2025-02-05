@@ -5,9 +5,10 @@ import (
 	"errors"
 	"fmt"
 	"io"
-	"llm-debate/internal/client"
-	"llm-debate/internal/config"
 	"time"
+
+	"github.com/ooneko/DebateGPT/internal/client"
+	"github.com/ooneko/DebateGPT/internal/config"
 
 	"github.com/google/uuid"
 	"github.com/sashabaranov/go-openai"

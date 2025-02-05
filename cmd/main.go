@@ -8,8 +8,8 @@ import (
 	"os"
 	"time"
 
-	"llm-debate/internal/config"
-	"llm-debate/internal/domain"
+	"github.com/ooneko/DebateGPT/internal/config"
+	"github.com/ooneko/DebateGPT/internal/domain"
 )
 
 func main() {

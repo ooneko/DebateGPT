@@ -1,3 +1,6 @@
+//go:build integration
+// +build integration
+
 package domain
 
 import (
@@ -6,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	"llm-debate/internal/config"
+	"github.com/ooneko/DebateGPT/internal/config"
 
 	"github.com/stretchr/testify/assert"
 )

@@ -1,7 +1,7 @@
 package client
 
 import (
-	"llm-debate/internal/config"
+	"github.com/ooneko/DebateGPT/internal/config"
 
 	"github.com/sashabaranov/go-openai"
 )

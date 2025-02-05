@@ -1,12 +1,16 @@
+//go:build integration
+// +build integration
+
 package domain_test
 
 import (
 	"context"
-	"llm-debate/internal/config"
-	"llm-debate/internal/domain"
 	"os"
 	"testing"
 	"time"
+
+	"github.com/ooneko/DebateGPT/internal/config"
+	"github.com/ooneko/DebateGPT/internal/domain"
 
 	"github.com/stretchr/testify/assert"
 )

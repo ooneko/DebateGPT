@@ -8,8 +8,8 @@ import (
 	"io"
 	"log"
 
-	"llm-debate/internal/client"
-	"llm-debate/internal/config"
+	"github.com/ooneko/DebateGPT/internal/client"
+	"github.com/ooneko/DebateGPT/internal/config"
 
 	"github.com/sashabaranov/go-openai"
 )
