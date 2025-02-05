@@ -74,7 +74,7 @@ go run cmd/main.go -topic="人工智能在医疗中的应用" -rounds=3
 运行集成测试以验证评委模块和辩论流程：
 
 ```bash
-go test ./internal/domain -v
+go test -v -tags=integration ./internal/domain
 ```
 
 ## 注意事项
@@ -90,4 +90,3 @@ go test ./internal/domain -v
 
 本项目采用 [MIT 许可证](LICENSE) 开源发布。
 
-```
