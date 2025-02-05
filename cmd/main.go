@@ -47,18 +47,18 @@ func main() {
 	fmt.Printf("辩论结束！\n")
 	fmt.Printf("辩论主题: %s\n", result.Topic)
 	fmt.Printf("总轮次: %d\n", result.TotalRounds)
-	fmt.Printf("红方总分: %.1f\n", result.RedScore)
-	fmt.Printf("蓝方总分: %.1f\n", result.BlueScore)
+	fmt.Printf("正方总分: %.1f\n", result.ProponentScore)
+	fmt.Printf("反方总分: %.1f\n", result.OpponentScore)
 	fmt.Printf("赢家: %s\n", result.Winner)
 
 	// 显示每轮详细情况
 	fmt.Println("\n每轮细节:")
 	for _, r := range result.Details {
 		fmt.Printf("第 %d 轮:\n", r.Round)
-		fmt.Printf("红方论点: %s\n", r.RedArgument)
-		fmt.Printf("蓝方论点: %s\n", r.BlueArgument)
-		fmt.Printf("红方得分: %.1f\n", r.RedScore)
-		fmt.Printf("蓝方得分: %.1f\n", r.BlueScore)
+		fmt.Printf("正方论点: %s\n", r.ProponentArgument)
+		fmt.Printf("反方论点: %s\n", r.OpponentArgument)
+		fmt.Printf("正方得分: %.1f\n", r.ProponentScore)
+		fmt.Printf("反方得分: %.1f\n", r.OpponentScore)
 		fmt.Println()
 	}
 }

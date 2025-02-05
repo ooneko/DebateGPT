@@ -44,11 +44,11 @@ func (j *LLMJudge) Score(ctx context.Context, debateContext *DebateContext, argu
 	// 根据 DebateContext 中的历史发言构造评分所需的历史记录字符串
 	var historyStr string
 	for _, action := range debateContext.History {
-		historyStr += fmt.Sprintf("[%s]: %s\n", action.ActorID, action.Content)
+		historyStr += fmt.Sprintf("[%s]: %s\n", action.Position, action.Content)
 	}
 
 	// 构造详细评分提示，将历史发言和当前论点一起提供给评委
-	prompt := fmt.Sprintf(`作为专业评委，请根据以下标准评价辩论表现：
+	prompt := fmt.Sprintf(`作为专业评委，请根据以下标准评价当前辩手的辩论表现：
 主题：%s
 历史发言：
 %s
@@ -159,8 +159,6 @@ func (j *LLMJudge) Score(ctx context.Context, debateContext *DebateContext, argu
 	}
 
 	if err := json.Unmarshal([]byte(output), &partialResult); err != nil {
-		log.Printf("响应解析失败: %v", err)
-		log.Printf("响应内容: %s", output)
 		return EvaluationResult{}, fmt.Errorf("响应解析失败: %w", err)
 	}
 

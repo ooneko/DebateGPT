@@ -52,16 +52,16 @@ func TestDebateFlow(t *testing.T) {
 	assert.NoError(t, err)
 	assert.NotNil(t, result)
 	assert.Equal(t, 2, result.TotalRounds)
-	assert.True(t, result.RedScore > 0, "红方得分应大于0")
-	assert.True(t, result.BlueScore > 0, "蓝方得分应大于0")
-	assert.Contains(t, []string{"红方", "蓝方", "平局"}, result.Winner)
+	assert.True(t, result.ProponentScore > 0, "正方得分应大于0")
+	assert.True(t, result.OpponentScore > 0, "反方得分应大于0")
+	assert.Contains(t, []string{"正方", "反方", "平局"}, result.Winner)
 
 	// 验证回合细节
 	for _, round := range result.Details {
-		assert.NotEmpty(t, round.RedArgument)
-		assert.NotEmpty(t, round.BlueArgument)
-		assert.True(t, round.RedScore > 0, "红方单轮得分应大于0")
-		assert.True(t, round.BlueScore > 0, "蓝方单轮得分应大于0")
+		assert.NotEmpty(t, round.ProponentArgument)
+		assert.NotEmpty(t, round.OpponentArgument)
+		assert.True(t, round.ProponentScore > 0, "正方单轮得分应大于0")
+		assert.True(t, round.OpponentScore > 0, "反方单轮得分应大于0")
 	}
 }
 
