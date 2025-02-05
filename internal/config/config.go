@@ -8,6 +8,8 @@ import (
 	"gopkg.in/yaml.v3"
 )
 
+var ReadFile = os.ReadFile
+
 // Config 定义完整的配置结构
 type Config struct {
 	API struct {
@@ -21,7 +23,7 @@ type Config struct {
 
 // LoadConfig 加载并验证配置
 func LoadConfig(filename string) (*Config, error) {
-	data, err := os.ReadFile(filename)
+	data, err := ReadFile(filename)
 	if err != nil {
 		return nil, fmt.Errorf("读取配置文件失败: %v", err)
 	}
