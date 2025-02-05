@@ -152,9 +152,9 @@ func (d *AIDebater) GenerateArgument(ctx context.Context, debateContext *DebateC
 		historyPrompt)
 
 	if side == Proponent {
-		fmt.Println("正方发言：")
+		fmt.Printf("\n 正方发言：")
 	} else {
-		fmt.Println("反方发言：")
+		fmt.Printf("\n 反方发言：")
 	}
 	// 使用流式输出调用大模型接口
 	stream, err := d.client.CreateChatCompletionStream(ctx, openai.ChatCompletionRequest{

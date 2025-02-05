@@ -14,7 +14,7 @@ import (
 
 func main() {
 	// 加载配置文件
-	cfg, err := config.LoadConfig("../config.yaml")
+	cfg, err := config.LoadConfig("config.yaml")
 	if err != nil {
 		log.Fatalf("配置加载失败: %v", err)
 	}
@@ -50,15 +50,4 @@ func main() {
 	fmt.Printf("正方总分: %.1f\n", result.ProponentScore)
 	fmt.Printf("反方总分: %.1f\n", result.OpponentScore)
 	fmt.Printf("赢家: %s\n", result.Winner)
-
-	// 显示每轮详细情况
-	fmt.Println("\n每轮细节:")
-	for _, r := range result.Details {
-		fmt.Printf("第 %d 轮:\n", r.Round)
-		fmt.Printf("正方论点: %s\n", r.ProponentArgument)
-		fmt.Printf("反方论点: %s\n", r.OpponentArgument)
-		fmt.Printf("正方得分: %.1f\n", r.ProponentScore)
-		fmt.Printf("反方得分: %.1f\n", r.OpponentScore)
-		fmt.Println()
-	}
 }
