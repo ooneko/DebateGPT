@@ -40,12 +40,12 @@ DebateGPT 是一个利用大型语言模型构建的自动化辩论系统，支�
    在项目根目录下创建 `config.yaml`（该文件被 `.gitignore` 忽略），例如：
 
    ```yaml
-   API:
-     Endpoint: "https://api.yourmodel.com"
-     Key: "your-api-key"
-     Timeout: 600s
-     Model: "gpt-3.5-turbo"
-     MaxTokens: 10000
+   api:
+     endpoint: "https://api.yourmodel.com"
+     key: "your-api-key"
+     model: "gpt-3.5-turbo"
+     max_tokens: 10000
+     timeout: 600s
    ```
 
 3. **依赖安装**
