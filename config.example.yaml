@@ -1,7 +1,12 @@
 # OpenAI API配置
 api:
-  endpoint: "" # api url of openai
-  key: ""
-  model: ""
-  max_tokens: 10000
-  timeout: 60s
+  endpoint: "https://api.openai.com/v1"
+  key: "your-api-key"
+  model: "gpt-3.5-turbo"
+  max_tokens: 1000
+  timeout: 30s
+
+server:
+  port: 8080
+  read_timeout: 15s
+  write_timeout: 15s

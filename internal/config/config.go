@@ -19,6 +19,11 @@ type Config struct {
 		MaxTokens int           `yaml:"max_tokens"`
 		Timeout   time.Duration `yaml:"timeout"`
 	} `yaml:"api"`
+	Server struct {
+		Port         int           `yaml:"port"`
+		ReadTimeout  time.Duration `yaml:"read_timeout"`
+		WriteTimeout time.Duration `yaml:"write_timeout"`
+	} `yaml:"server"`
 }
 
 // LoadConfig 加载并验证配置
