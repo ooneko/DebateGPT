@@ -1,0 +1,550 @@
+/* 辩论页面样式 */
+.debate-main {
+    margin-bottom: 60px;
+}
+
+/* 辩题头部样式 */
+.debate-header {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.debate-header h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+}
+
+/* 进度条样式 */
+.debate-status {
+    margin-bottom: 30px;
+}
+
+.progress-bar {
+    position: relative;
+    height: 8px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
+
+.progress-bar-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background-color: var(--primary-color);
+    border-radius: 4px;
+    transition: width 0.5s ease;
+}
+
+.progress-markers {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.marker {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.marker.active,
+.marker.completed {
+    background-color: var(--primary-color);
+}
+
+.marker.active::before,
+.marker.completed::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.marker-label {
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-size: 12px;
+    color: var(--light-text);
+    transition: color 0.3s ease;
+}
+
+.marker.active .marker-label,
+.marker.completed .marker-label {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* 控制按钮样式 */
+.debate-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.control-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.control-btn:hover:not(:disabled) {
+    background-color: #e0e0e0;
+}
+
+.control-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.round-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.current-round {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.round-name {
+    font-size: 0.9rem;
+    color: #666;
+    display: block;
+    margin-top: 0.3rem;
+}
+
+/* 语音控制样式 */
+.voice-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+}
+
+.voice-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3f51b5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.voice-btn:hover {
+    background-color: #303f9f;
+}
+
+.voice-btn.playing {
+    background-color: #f44336;
+}
+
+.voice-btn i {
+    margin-right: 0.5rem;
+}
+
+.voice-settings {
+    display: flex;
+    margin-left: 1rem;
+}
+
+.voice-setting {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+.voice-setting label {
+    margin-right: 0.5rem;
+    font-size: 0.85rem;
+    color: #555;
+}
+
+.voice-setting select {
+    padding: 0.3rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+
+.voice-setting input[type="range"] {
+    width: 100px;
+}
+
+/* 辩论内容布局 */
+.debate-content {
+    display: flex;
+    margin: 2rem 0;
+}
+
+@media (max-width: 991px) {
+    .debate-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 辩手区域 */
+.debate-arena {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: var(--box-shadow);
+}
+
+.debaters {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.debater {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.debater-avatar {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 0.5rem;
+    overflow: hidden;
+}
+
+.debater-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.debater-position {
+    position: absolute;
+    bottom: -5px;
+    padding: 3px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+}
+
+.debater-position.left {
+    background-color: #4caf50;
+    left: -10px;
+}
+
+.debater-position.right {
+    background-color: #f44336;
+    right: -10px;
+}
+
+.debater-name {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.debate-vs {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--light-text);
+}
+
+/* 对话区域 */
+.debate-dialog-container {
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.debate-dialog {
+    display: none;
+}
+
+.debate-dialog.active {
+    display: block;
+}
+
+.speech {
+    margin-bottom: 25px;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.speech.left {
+    margin-right: 40px;
+    background-color: rgba(76, 175, 80, 0.1);
+    border-left: 4px solid #4caf50;
+}
+
+.speech.right {
+    margin-left: 40px;
+    background-color: rgba(244, 67, 54, 0.1);
+    border-left: 4px solid #f44336;
+}
+
+.speech-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.speech-header .avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.speech-header .avatar i {
+    font-size: 18px;
+    color: var(--primary-color);
+}
+
+.speaker-name {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.speaker-position {
+    font-size: 12px;
+    color: var(--light-text);
+}
+
+.speech-content p {
+    margin-bottom: 12px;
+    line-height: 1.7;
+}
+
+.speech-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* 评委面板 */
+.judge-panel {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: var(--box-shadow);
+}
+
+.judge-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.judge-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.judge-avatar i {
+    font-size: 24px;
+    color: var(--primary-color);
+}
+
+.judge-header h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.judge-comments {
+    display: none;
+    margin-bottom: 25px;
+}
+
+.judge-comments.active {
+    display: block;
+}
+
+.comment p {
+    margin-bottom: 10px;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+/* 评分卡 */
+.score-card {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.score-card h4 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.scores {
+    margin-bottom: 20px;
+}
+
+.score-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.debater-side {
+    width: 60px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.score-bar-container {
+    flex: 1;
+    height: 24px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+
+.score-bar {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+    color: white;
+    font-weight: 600;
+    font-size: 12px;
+    transition: width 0.5s ease;
+}
+
+.score-bar.left {
+    background-color: #4caf50;
+}
+
+.score-bar.right {
+    background-color: #f44336;
+}
+
+.score-dimensions {
+    margin-top: 25px;
+}
+
+.dimension {
+    margin-bottom: 12px;
+}
+
+.dimension-label {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 5px;
+    color: var(--light-text);
+}
+
+.dimension-bars {
+    display: flex;
+    height: 6px;
+    width: 100%;
+}
+
+.dimension-left,
+.dimension-right {
+    height: 100%;
+    transition: width 0.5s ease;
+}
+
+.dimension-left {
+    background-color: #4caf50;
+    border-radius: 3px 0 0 3px;
+}
+
+.dimension-right {
+    background-color: #f44336;
+    border-radius: 0 3px 3px 0;
+}
+
+/* 页面底部操作按钮 */
+.debate-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.action-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.action-btn:not(.primary) {
+    background-color: transparent;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+
+.action-btn.primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.action-btn:hover:not(.primary) {
+    background-color: #f1f1f1;
+}
+
+.action-btn.primary:hover {
+    background-color: #303f9f;
+}

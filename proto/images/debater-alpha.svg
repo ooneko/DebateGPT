@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+  <style>
+    .primary-color { fill: #3f51b5; }
+    .secondary-color { fill: #c5cae9; }
+    .accent-color { fill: #7986cb; }
+    .light-color { fill: #e8eaf6; }
+    .neutral-color { fill: #455a64; }
+  </style>
+  
+  <!-- 背景 -->
+  <rect width="100" height="100" class="light-color" />
+  
+  <!-- 辩手头部 -->
+  <circle cx="50" cy="40" r="25" class="primary-color" />
+  
+  <!-- 眼镜 -->
+  <rect x="35" y="35" width="30" height="10" rx="5" fill="none" stroke="#333" stroke-width="2" />
+  <line x1="35" y1="40" x2="28" y2="40" stroke="#333" stroke-width="2" />
+  <line x1="65" y1="40" x2="72" y2="40" stroke="#333" stroke-width="2" />
+  
+  <!-- 眼睛 -->
+  <circle cx="40" cy="40" r="3" fill="#333" />
+  <circle cx="60" cy="40" r="3" fill="#333" />
+  
+  <!-- 嘴巴 - 思考状态 -->
+  <path d="M45,48 Q50,51 55,48" stroke="#333" stroke-width="1.5" fill="none" />
+  
+  <!-- 额头纹路 - 表示思考 -->
+  <line x1="40" y1="30" x2="60" y2="30" stroke="#333" stroke-opacity="0.3" stroke-width="1" />
+  <line x1="38" y1="27" x2="62" y2="27" stroke="#333" stroke-opacity="0.3" stroke-width="1" />
+  
+  <!-- 身体/西装 -->
+  <path d="M30,65 V85 H70 V65 L60,55 H40 Z" class="primary-color" />
+  
+  <!-- 领带 -->
+  <path d="M48,55 L48,85 L50,87 L52,85 L52,55 Z" class="accent-color" />
+  <path d="M48,55 L52,55 L50,57 Z" class="accent-color" />
+  
+  <!-- 白衬衫 -->
+  <path d="M40,55 H60 L50,65 Z" fill="white" />
+  
+  <!-- 脖子 -->
+  <rect x="45" y="50" width="10" height="5" fill="#ffccbc" />
+  
+  <!-- 笔记板 - 理性形象标志 -->
+  <rect x="16" y="70" width="14" height="20" class="neutral-color" />
+  <rect x="18" y="72" width="10" height="16" fill="white" />
+  <line x1="20" y1="75" x2="26" y2="75" stroke="#333" stroke-width="0.5" />
+  <line x1="20" y1="78" x2="26" y2="78" stroke="#333" stroke-width="0.5" />
+  <line x1="20" y1="81" x2="26" y2="81" stroke="#333" stroke-width="0.5" />
+  <line x1="20" y1="84" x2="24" y2="84" stroke="#333" stroke-width="0.5" />
+  
+  <!-- 大脑图标 - 代表理性思维 -->
+  <circle cx="74" cy="75" r="8" class="secondary-color" />
+  <path d="M70,73 C72,70 76,70 78,73 C80,71 82,72 82,74 C82,76 80,77 78,77 C78,79 76,80 74,80 C72,80 70,79 70,77 C68,77 66,76 66,74 C66,72 68,71 70,73 Z" class="accent-color" />
+</svg> 

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录 - AI辩论赛</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-comments"></i>
+                <h1>AI辩论赛</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="history.html">历史记录</a></li>
+                    <li><a href="#about">关于我们</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="login-section">
+                <div class="login-container">
+                    <div class="login-header">
+                        <h2>登录账号</h2>
+                        <p class="subtitle">登录以保存您的辩论记录，随时随地继续辩论</p>
+                    </div>
+                    
+                    <div class="login-tabs">
+                        <button class="login-tab active" data-tab="phone">手机号登录</button>
+                        <button class="login-tab" data-tab="wechat">微信登录</button>
+                        <button class="login-tab" data-tab="google">Google登录</button>
+                    </div>
+                    
+                    <div class="login-tab-content active" id="phone-login">
+                        <form class="login-form">
+                            <div class="form-group">
+                                <label for="phone">手机号</label>
+                                <div class="phone-input-group">
+                                    <select class="country-code">
+                                        <option value="+86">+86</option>
+                                        <option value="+1">+1</option>
+                                        <option value="+44">+44</option>
+                                        <option value="+81">+81</option>
+                                        <option value="+82">+82</option>
+                                    </select>
+                                    <input type="tel" id="phone" placeholder="请输入手机号" required>
+                                </div>
+                            </div>
+                            <div class="form-group verification-group">
+                                <label for="verification">验证码</label>
+                                <div class="verification-input-group">
+                                    <input type="text" id="verification" placeholder="请输入验证码" required>
+                                    <button type="button" class="get-code-btn">获取验证码</button>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="primary-btn login-btn">登录</button>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <div class="login-tab-content" id="wechat-login">
+                        <div class="qrcode-container">
+                            <div class="qrcode-box">
+                                <img src="images/wechat-qrcode-placeholder.svg" alt="微信二维码">
+                            </div>
+                            <p class="qrcode-tip">请使用微信扫描二维码登录</p>
+                            <p class="qrcode-refresh">二维码已失效？<button class="refresh-btn">刷新</button></p>
+                        </div>
+                    </div>
+                    
+                    <div class="login-tab-content" id="google-login">
+                        <div class="google-login-container">
+                            <button class="google-login-btn">
+                                <img src="images/google-icon.svg" alt="Google图标">
+                                <span>使用Google账号登录</span>
+                            </button>
+                            <p class="google-login-tip">点击按钮将跳转至Google登录页面</p>
+                        </div>
+                    </div>
+                    
+                    <div class="other-options">
+                        <p>还没有账号？<a href="register.html">立即注册</a></p>
+                        <p><a href="forgot-password.html">忘记密码？</a></p>
+                    </div>
+                    
+                    <div class="agreement-notice">
+                        <p>登录即表示您同意我们的<a href="#terms">服务条款</a>和<a href="#privacy">隐私政策</a></p>
+                    </div>
+                </div>
+                
+                <div class="login-side-image">
+                    <img src="images/debate-illustration.svg" alt="AI辩论插图">
+                    <div class="side-content">
+                        <h3>加入AI辩论赛</h3>
+                        <p>登录账号，开启辩论之旅，探索思想的多元碰撞</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-comments"></i>
+                    <h2>AI辩论赛</h2>
+                </div>
+                <div class="footer-links">
+                    <h3>快速链接</h3>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="topic.html">开始辩论</a></li>
+                        <li><a href="history.html">历史记录</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>联系我们</h3>
+                    <p><i class="fas fa-envelope"></i> contact@aidebate.com</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 AI辩论赛. 保留所有权利.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/login.js"></script>
+</body>
+</html> 

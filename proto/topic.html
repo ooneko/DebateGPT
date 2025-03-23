@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>选择辩题 - AI辩论赛</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/topic.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-comments"></i>
+                <h1>AI辩论赛</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="history.html">历史记录</a></li>
+                    <li><a href="#about">关于我们</a></li>
+                    <li><a href="login.html" class="login-link"><i class="fas fa-user"></i> 登录</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="topic-section">
+                <h2>选择辩题</h2>
+                <p class="subtitle">输入自定义辩题或从推荐辩题中选择</p>
+
+                <div class="topic-input-container">
+                    <form id="topic-form" action="debate.html" method="get">
+                        <div class="input-group">
+                            <input type="text" id="custom-topic" name="topic" placeholder="输入您的辩题，例如：人工智能是否会取代人类工作？" required>
+                            <button type="submit" class="primary-btn">开始辩论</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="topic-categories">
+                    <h3>热门类别</h3>
+                    <div class="category-tabs">
+                        <button class="category-tab active" data-category="all">全部</button>
+                        <button class="category-tab" data-category="tech">科技</button>
+                        <button class="category-tab" data-category="society">社会</button>
+                        <button class="category-tab" data-category="education">教育</button>
+                        <button class="category-tab" data-category="ethics">伦理</button>
+                        <button class="category-tab" data-category="environment">环境</button>
+                    </div>
+                </div>
+
+                <div class="recommended-topics">
+                    <h3>推荐辩题</h3>
+                    <div class="topic-grid">
+                        <div class="topic-item" data-category="tech">
+                            <div class="topic-content">
+                                <h4>技术发展是否应该被限制</h4>
+                                <p>探讨科技发展的边界与伦理问题</p>
+                                <div class="topic-tags">
+                                    <span class="tag">科技</span>
+                                    <span class="tag">伦理</span>
+                                </div>
+                            </div>
+                            <button class="select-topic-btn" data-topic="技术发展是否应该被限制">选择</button>
+                        </div>
+
+                        <div class="topic-item" data-category="tech society">
+                            <div class="topic-content">
+                                <h4>AI是否会取代人类工作</h4>
+                                <p>人工智能时代的就业与社会变革</p>
+                                <div class="topic-tags">
+                                    <span class="tag">科技</span>
+                                    <span class="tag">社会</span>
+                                </div>
+                            </div>
+                            <button class="select-topic-btn" data-topic="AI是否会取代人类工作">选择</button>
+                        </div>
+
+                        <div class="topic-item" data-category="tech ethics">
+                            <div class="topic-content">
+                                <h4>网络隐私与安全孰轻孰重</h4>
+                                <p>在数字时代如何平衡个人隐私与公共安全</p>
+                                <div class="topic-tags">
+                                    <span class="tag">科技</span>
+                                    <span class="tag">伦理</span>
+                                </div>
+                            </div>
+                            <button class="select-topic-btn" data-topic="网络隐私与安全孰轻孰重">选择</button>
+                        </div>
+
+                        <div class="topic-item" data-category="education">
+                            <div class="topic-content">
+                                <h4>现代教育应注重知识还是能力</h4>
+                                <p>探讨教育本质与培养目标</p>
+                                <div class="topic-tags">
+                                    <span class="tag">教育</span>
+                                </div>
+                            </div>
+                            <button class="select-topic-btn" data-topic="现代教育应注重知识还是能力">选择</button>
+                        </div>
+
+                        <div class="topic-item" data-category="society ethics">
+                            <div class="topic-content">
+                                <h4>社交媒体利大于弊还是弊大于利</h4>
+                                <p>分析社交媒体对现代社会的影响</p>
+                                <div class="topic-tags">
+                                    <span class="tag">社会</span>
+                                    <span class="tag">伦理</span>
+                                </div>
+                            </div>
+                            <button class="select-topic-btn" data-topic="社交媒体利大于弊还是弊大于利">选择</button>
+                        </div>
+
+                        <div class="topic-item" data-category="environment society">
+                            <div class="topic-content">
+                                <h4>经济发展与环境保护是否可以兼得</h4>
+                                <p>可持续发展的现实困境与未来路径</p>
+                                <div class="topic-tags">
+                                    <span class="tag">环境</span>
+                                    <span class="tag">社会</span>
+                                </div>
+                            </div>
+                            <button class="select-topic-btn" data-topic="经济发展与环境保护是否可以兼得">选择</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-comments"></i>
+                    <h2>AI辩论赛</h2>
+                </div>
+                <div class="footer-links">
+                    <h3>快速链接</h3>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="topic.html">开始辩论</a></li>
+                        <li><a href="history.html">历史记录</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>联系我们</h3>
+                    <p><i class="fas fa-envelope"></i> contact@aidebate.com</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 AI辩论赛. 保留所有权利.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/topic.js"></script>
+</body>
+</html> 

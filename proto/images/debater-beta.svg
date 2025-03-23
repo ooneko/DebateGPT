@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+  <style>
+    .primary-color { fill: #f44336; }
+    .secondary-color { fill: #ffcdd2; }
+    .accent-color { fill: #e57373; }
+    .light-color { fill: #ffebee; }
+    .neutral-color { fill: #455a64; }
+  </style>
+  
+  <!-- 背景 -->
+  <rect width="100" height="100" class="light-color" />
+  
+  <!-- 辩手头部 -->
+  <circle cx="50" cy="40" r="25" class="primary-color" />
+  
+  <!-- 眉毛 - 表示批判性思考 -->
+  <path d="M35,35 L45,32" stroke="#333" stroke-width="2" fill="none" />
+  <path d="M55,32 L65,35" stroke="#333" stroke-width="2" fill="none" />
+  
+  <!-- 眼睛 - 锐利的目光 -->
+  <path d="M37,40 L43,40" stroke="#333" stroke-width="2" stroke-linecap="round" />
+  <path d="M57,40 L63,40" stroke="#333" stroke-width="2" stroke-linecap="round" />
+  
+  <!-- 嘴巴 - 质疑表情 -->
+  <path d="M45,48 Q50,46 55,48" stroke="#333" stroke-width="1.5" fill="none" />
+  
+  <!-- 身体/外套 -->
+  <path d="M30,65 V85 H70 V65 L60,55 H40 Z" class="primary-color" />
+  
+  <!-- 围巾 - 知识分子特征 -->
+  <path d="M40,55 H60 V60 Q50,65 40,60 Z" class="accent-color" />
+  <path d="M46,60 Q50,63 54,60 L54,67 Q50,70 46,67 Z" class="accent-color" />
+  
+  <!-- 脖子 -->
+  <rect x="45" y="50" width="10" height="5" fill="#ffccbc" />
+  
+  <!-- 问号图标 - 代表质疑精神 -->
+  <circle cx="75" cy="75" r="8" class="secondary-color" />
+  <path d="M73,73 C73,71 77,71 77,73 L77,76 L75,76 M75,80 L75,81" stroke="#333" stroke-width="2" stroke-linecap="round" fill="none" />
+  
+  <!-- 放大镜 - 代表批判性审视 -->
+  <circle cx="23" cy="73" r="6" fill="none" stroke="#333" stroke-width="2" />
+  <line x1="27" y1="77" x2="32" y2="82" stroke="#333" stroke-width="2" />
+  <line x1="23" y1="73" x2="23" y2="73" stroke="#333" stroke-width="0.5" />
+</svg> 

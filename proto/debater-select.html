@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>选择辩手 - AI辩论赛</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/debater-select.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-comments"></i>
+                <h1>AI辩论赛</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="history.html">历史记录</a></li>
+                    <li><a href="#about">关于我们</a></li>
+                    <li><a href="login.html" class="login-link"><i class="fas fa-user"></i> 登录</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="select-section">
+                <div class="select-header">
+                    <h2>选择辩手</h2>
+                    <p class="topic-title">辩题：<span id="debate-topic">技术发展是否应该被限制</span></p>
+                    <p class="subtitle">为正方和反方选择您喜欢的AI辩手</p>
+                </div>
+                
+                <div class="debater-selection">
+                    <div class="side-selection left-side">
+                        <h3 class="side-title">正方辩手</h3>
+                        <div class="debaters-list">
+                            <div class="debater-card selected" data-debater-id="alpha">
+                                <div class="debater-avatar">
+                                    <img src="images/debater-alpha.svg" alt="理性思考者">
+                                    <div class="selection-indicator"><i class="fas fa-check-circle"></i></div>
+                                </div>
+                                <div class="debater-info">
+                                    <h4 class="debater-name">理性思考者</h4>
+                                    <p class="debater-desc">逻辑严谨，善于分析，擅长引用数据和研究支持论点</p>
+                                    <div class="debater-traits">
+                                        <span class="trait"><i class="fas fa-brain"></i> 理性</span>
+                                        <span class="trait"><i class="fas fa-chart-line"></i> 数据驱动</span>
+                                        <span class="trait"><i class="fas fa-book"></i> 学术派</span>
+                                    </div>
+                                    <div class="voice-sample">
+                                        <button class="play-voice" data-voice="alpha"><i class="fas fa-volume-up"></i> 试听声音</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="debater-card" data-debater-id="gamma">
+                                <div class="debater-avatar">
+                                    <img src="images/debater-gamma.svg" alt="创新倡导者">
+                                    <div class="selection-indicator"><i class="fas fa-check-circle"></i></div>
+                                </div>
+                                <div class="debater-info">
+                                    <h4 class="debater-name">创新倡导者</h4>
+                                    <p class="debater-desc">富有激情和远见，擅长启发性思考，喜欢挑战传统观念</p>
+                                    <div class="debater-traits">
+                                        <span class="trait"><i class="fas fa-lightbulb"></i> 创新</span>
+                                        <span class="trait"><i class="fas fa-fire"></i> 热情</span>
+                                        <span class="trait"><i class="fas fa-rocket"></i> 前瞻性</span>
+                                    </div>
+                                    <div class="voice-sample">
+                                        <button class="play-voice" data-voice="gamma"><i class="fas fa-volume-up"></i> 试听声音</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="debater-card" data-debater-id="epsilon">
+                                <div class="debater-avatar">
+                                    <img src="images/debater-epsilon.svg" alt="平衡协调者">
+                                    <div class="selection-indicator"><i class="fas fa-check-circle"></i></div>
+                                </div>
+                                <div class="debater-info">
+                                    <h4 class="debater-name">平衡协调者</h4>
+                                    <p class="debater-desc">善于权衡利弊，注重不同视角的整合，追求兼顾各方利益</p>
+                                    <div class="debater-traits">
+                                        <span class="trait"><i class="fas fa-balance-scale"></i> 平衡</span>
+                                        <span class="trait"><i class="fas fa-handshake"></i> 协作</span>
+                                        <span class="trait"><i class="fas fa-globe"></i> 全局观</span>
+                                    </div>
+                                    <div class="voice-sample">
+                                        <button class="play-voice" data-voice="epsilon"><i class="fas fa-volume-up"></i> 试听声音</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="vs-divider">
+                        <div class="vs-circle">VS</div>
+                    </div>
+                    
+                    <div class="side-selection right-side">
+                        <h3 class="side-title">反方辩手</h3>
+                        <div class="debaters-list">
+                            <div class="debater-card selected" data-debater-id="beta">
+                                <div class="debater-avatar">
+                                    <img src="images/debater-beta.svg" alt="批判思想家">
+                                    <div class="selection-indicator"><i class="fas fa-check-circle"></i></div>
+                                </div>
+                                <div class="debater-info">
+                                    <h4 class="debater-name">批判思想家</h4>
+                                    <p class="debater-desc">擅长发现问题的本质，喜欢提出尖锐问题，思考深入而辩证</p>
+                                    <div class="debater-traits">
+                                        <span class="trait"><i class="fas fa-search"></i> 洞察力</span>
+                                        <span class="trait"><i class="fas fa-question-circle"></i> 质疑精神</span>
+                                        <span class="trait"><i class="fas fa-chess"></i> 策略性</span>
+                                    </div>
+                                    <div class="voice-sample">
+                                        <button class="play-voice" data-voice="beta"><i class="fas fa-volume-up"></i> 试听声音</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="debater-card" data-debater-id="delta">
+                                <div class="debater-avatar">
+                                    <img src="images/debater-delta.svg" alt="历史守护者">
+                                    <div class="selection-indicator"><i class="fas fa-check-circle"></i></div>
+                                </div>
+                                <div class="debater-info">
+                                    <h4 class="debater-name">历史守护者</h4>
+                                    <p class="debater-desc">尊重传统和历史经验，擅长从历史教训中汲取智慧，稳健保守</p>
+                                    <div class="debater-traits">
+                                        <span class="trait"><i class="fas fa-landmark"></i> 传统</span>
+                                        <span class="trait"><i class="fas fa-shield-alt"></i> 稳健</span>
+                                        <span class="trait"><i class="fas fa-history"></i> 经验丰富</span>
+                                    </div>
+                                    <div class="voice-sample">
+                                        <button class="play-voice" data-voice="delta"><i class="fas fa-volume-up"></i> 试听声音</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="debater-card" data-debater-id="zeta">
+                                <div class="debater-avatar">
+                                    <img src="images/debater-zeta.svg" alt="人文关怀者">
+                                    <div class="selection-indicator"><i class="fas fa-check-circle"></i></div>
+                                </div>
+                                <div class="debater-info">
+                                    <h4 class="debater-name">人文关怀者</h4>
+                                    <p class="debater-desc">重视情感和人文价值，关注社会公平和道德伦理，富有同理心</p>
+                                    <div class="debater-traits">
+                                        <span class="trait"><i class="fas fa-heart"></i> 关怀</span>
+                                        <span class="trait"><i class="fas fa-users"></i> 社会责任</span>
+                                        <span class="trait"><i class="fas fa-dove"></i> 理想主义</span>
+                                    </div>
+                                    <div class="voice-sample">
+                                        <button class="play-voice" data-voice="zeta"><i class="fas fa-volume-up"></i> 试听声音</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="voice-settings">
+                    <h3>语音设置</h3>
+                    <div class="voice-options">
+                        <div class="voice-option">
+                            <input type="checkbox" id="enable-voice" checked>
+                            <label for="enable-voice">启用辩论语音</label>
+                        </div>
+                        <div class="voice-option">
+                            <label for="voice-speed">语速：</label>
+                            <select id="voice-speed">
+                                <option value="0.8">较慢</option>
+                                <option value="1" selected>正常</option>
+                                <option value="1.2">较快</option>
+                                <option value="1.5">快速</option>
+                            </select>
+                        </div>
+                        <div class="voice-option">
+                            <label for="voice-volume">音量：</label>
+                            <input type="range" id="voice-volume" min="0" max="1" step="0.1" value="0.8">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="selection-actions">
+                    <button id="back-btn" class="btn secondary-btn"><i class="fas fa-arrow-left"></i> 返回选题</button>
+                    <button id="start-debate-btn" class="btn primary-btn">开始辩论 <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-comments"></i>
+                    <h2>AI辩论赛</h2>
+                </div>
+                <div class="footer-links">
+                    <h3>快速链接</h3>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="topic.html">开始辩论</a></li>
+                        <li><a href="history.html">历史记录</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>联系我们</h3>
+                    <p><i class="fas fa-envelope"></i> contact@aidebate.com</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 AI辩论赛. 保留所有权利.</p>
+            </div>
+        </footer>
+    </div>
+    
+    <audio id="voice-player" style="display: none;"></audio>
+
+    <script src="js/debater-select.js"></script>
+</body>
+</html> 

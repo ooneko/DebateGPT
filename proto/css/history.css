@@ -1,0 +1,418 @@
+/* 历史记录页面样式 */
+.history-section {
+    max-width: 900px;
+    margin: 0 auto 80px;
+}
+
+.history-section h2 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.history-section .subtitle {
+    text-align: center;
+    color: var(--light-text);
+    margin-bottom: 40px;
+    font-size: 18px;
+}
+
+/* 筛选器样式 */
+.history-filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.search-bar {
+    display: flex;
+    max-width: 400px;
+    width: 100%;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 10px 15px;
+    border: 2px solid var(--border-color);
+    border-radius: 4px 0 0 4px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.search-bar input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.search-bar button {
+    padding: 10px 15px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.filter-options select {
+    padding: 10px 15px;
+    border: 2px solid var(--border-color);
+    border-radius: 4px;
+    background-color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-options select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+/* 历史记录列表 */
+.history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.history-item {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+
+.history-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.history-content {
+    flex: 1;
+}
+
+.history-meta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.history-date {
+    font-size: 14px;
+    color: var(--light-text);
+}
+
+.history-date i {
+    margin-right: 5px;
+}
+
+.history-badge {
+    font-size: 12px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.history-badge.completed {
+    background-color: rgba(76, 175, 80, 0.1);
+    color: #4caf50;
+}
+
+.history-badge.in-progress {
+    background-color: rgba(255, 152, 0, 0.1);
+    color: #ff9800;
+}
+
+.history-topic {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.history-summary {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.debater-result {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.debater-side {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+.debater-result:first-child .debater-side {
+    background-color: rgba(76, 175, 80, 0.1);
+    color: #4caf50;
+}
+
+.debater-result:last-child .debater-side {
+    background-color: rgba(244, 67, 54, 0.1);
+    color: #f44336;
+}
+
+.debater-name {
+    font-size: 14px;
+}
+
+.score {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.score.win {
+    color: var(--success-color);
+}
+
+.vs-divider {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--light-text);
+}
+
+.debate-progress {
+    width: 100%;
+}
+
+.progress-label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: var(--primary-color);
+    border-radius: 4px;
+}
+
+/* 历史条目操作按钮 */
+.history-actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    margin-left: 20px;
+}
+
+.action-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+}
+
+.action-btn:hover {
+    background-color: #f1f1f1;
+}
+
+.action-btn.primary-action {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+}
+
+.action-btn.primary-action:hover {
+    background-color: #303f9f;
+}
+
+.delete-btn {
+    border: none;
+    color: var(--danger-color);
+}
+
+.delete-btn:hover {
+    background-color: rgba(244, 67, 54, 0.1);
+}
+
+/* 分页控件 */
+.history-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.pagination-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pagination-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.pagination-btn:hover:not(.active):not(:disabled) {
+    background-color: #f1f1f1;
+}
+
+.pagination-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* 空历史记录状态 */
+.empty-history {
+    text-align: center;
+    padding: 60px 0;
+}
+
+.empty-icon {
+    font-size: 60px;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+}
+
+.empty-history h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.empty-history p {
+    color: var(--light-text);
+    margin-bottom: 30px;
+}
+
+/* 删除确认模态框 */
+.delete-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    width: 90%;
+    max-width: 450px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.modal-header h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.close-modal {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: var(--light-text);
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.modal-body p {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.danger-btn {
+    background-color: var(--danger-color);
+    color: white;
+    border: none;
+}
+
+.danger-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* 响应式样式 */
+@media (max-width: 768px) {
+    .history-filters {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .search-bar {
+        max-width: 100%;
+    }
+    
+    .history-item {
+        flex-direction: column;
+    }
+    
+    .history-actions {
+        flex-direction: row;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    
+    .history-summary {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .debater-result {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .vs-divider {
+        display: none;
+    }
+} 

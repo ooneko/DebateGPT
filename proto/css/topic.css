@@ -1,0 +1,169 @@
+/* 辩题页面样式 */
+.topic-section {
+    max-width: 900px;
+    margin: 0 auto 80px;
+}
+
+.topic-section h2 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.topic-section .subtitle {
+    text-align: center;
+    color: var(--light-text);
+    margin-bottom: 40px;
+    font-size: 18px;
+}
+
+.topic-input-container {
+    margin-bottom: 50px;
+}
+
+.input-group {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+}
+
+.input-group input {
+    flex: 1;
+    padding: 15px 20px;
+    border: 2px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(63, 81, 181, 0.2);
+}
+
+.topic-categories {
+    margin-bottom: 40px;
+}
+
+.topic-categories h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.category-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.category-tab {
+    padding: 10px 20px;
+    background-color: transparent;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.category-tab.active, 
+.category-tab:hover {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.recommended-topics h3 {
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+
+.topic-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.topic-item {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+    transition: all 0.3s ease;
+}
+
+.topic-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.topic-content {
+    flex: 1;
+}
+
+.topic-content h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.topic-content p {
+    color: var(--light-text);
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.topic-tags {
+    display: flex;
+    gap: 8px;
+}
+
+.tag {
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    background-color: rgba(63, 81, 181, 0.1);
+    color: var(--primary-color);
+}
+
+.select-topic-btn {
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.select-topic-btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* 响应式样式 */
+@media (max-width: 768px) {
+    .input-group {
+        flex-direction: column;
+    }
+    
+    .topic-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .category-tabs {
+        justify-content: center;
+    }
+} 

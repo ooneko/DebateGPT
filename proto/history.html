@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>历史记录 - AI辩论赛</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/history.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-comments"></i>
+                <h1>AI辩论赛</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="history.html" class="active">历史记录</a></li>
+                    <li><a href="#about">关于我们</a></li>
+                    <li><a href="login.html" class="login-link"><i class="fas fa-user"></i> 登录</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="history-section">
+                <h2>历史辩论记录</h2>
+                <p class="subtitle">查看您参与过的所有辩论</p>
+
+                <div class="history-filters">
+                    <div class="search-bar">
+                        <input type="text" placeholder="搜索辩题..." id="search-input">
+                        <button id="search-btn"><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="filter-options">
+                        <select id="sort-filter">
+                            <option value="date-desc">时间 (最新)</option>
+                            <option value="date-asc">时间 (最早)</option>
+                            <option value="topic-asc">辩题 (A-Z)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="history-list">
+                    <div class="history-item">
+                        <div class="history-content">
+                            <div class="history-meta">
+                                <span class="history-date"><i class="far fa-calendar-alt"></i> 2023年6月15日</span>
+                                <span class="history-badge completed">已完成</span>
+                            </div>
+                            <h3 class="history-topic">技术发展是否应该被限制</h3>
+                            <div class="history-summary">
+                                <div class="debater-result">
+                                    <span class="debater-side">正方</span>
+                                    <span class="debater-name">AI辩手 Alpha</span>
+                                    <span class="score win">8.7</span>
+                                </div>
+                                <div class="vs-divider">VS</div>
+                                <div class="debater-result">
+                                    <span class="debater-side">反方</span>
+                                    <span class="debater-name">AI辩手 Beta</span>
+                                    <span class="score">8.6</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="history-actions">
+                            <a href="result.html?id=12345" class="action-btn">
+                                <i class="fas fa-poll"></i>
+                                <span>查看结果</span>
+                            </a>
+                            <a href="debate.html?topic=技术发展是否应该被限制&replay=true" class="action-btn">
+                                <i class="fas fa-play"></i>
+                                <span>回放辩论</span>
+                            </a>
+                            <button class="action-btn delete-btn">
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="history-item">
+                        <div class="history-content">
+                            <div class="history-meta">
+                                <span class="history-date"><i class="far fa-calendar-alt"></i> 2023年6月10日</span>
+                                <span class="history-badge completed">已完成</span>
+                            </div>
+                            <h3 class="history-topic">AI是否会取代人类工作</h3>
+                            <div class="history-summary">
+                                <div class="debater-result">
+                                    <span class="debater-side">正方</span>
+                                    <span class="debater-name">AI辩手 Alpha</span>
+                                    <span class="score">8.4</span>
+                                </div>
+                                <div class="vs-divider">VS</div>
+                                <div class="debater-result">
+                                    <span class="debater-side">反方</span>
+                                    <span class="debater-name">AI辩手 Beta</span>
+                                    <span class="score win">8.9</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="history-actions">
+                            <a href="result.html?id=12344" class="action-btn">
+                                <i class="fas fa-poll"></i>
+                                <span>查看结果</span>
+                            </a>
+                            <a href="debate.html?topic=AI是否会取代人类工作&replay=true" class="action-btn">
+                                <i class="fas fa-play"></i>
+                                <span>回放辩论</span>
+                            </a>
+                            <button class="action-btn delete-btn">
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="history-item">
+                        <div class="history-content">
+                            <div class="history-meta">
+                                <span class="history-date"><i class="far fa-calendar-alt"></i> 2023年6月5日</span>
+                                <span class="history-badge completed">已完成</span>
+                            </div>
+                            <h3 class="history-topic">网络隐私与安全孰轻孰重</h3>
+                            <div class="history-summary">
+                                <div class="debater-result">
+                                    <span class="debater-side">正方</span>
+                                    <span class="debater-name">AI辩手 Alpha</span>
+                                    <span class="score win">9.1</span>
+                                </div>
+                                <div class="vs-divider">VS</div>
+                                <div class="debater-result">
+                                    <span class="debater-side">反方</span>
+                                    <span class="debater-name">AI辩手 Beta</span>
+                                    <span class="score">8.7</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="history-actions">
+                            <a href="result.html?id=12343" class="action-btn">
+                                <i class="fas fa-poll"></i>
+                                <span>查看结果</span>
+                            </a>
+                            <a href="debate.html?topic=网络隐私与安全孰轻孰重&replay=true" class="action-btn">
+                                <i class="fas fa-play"></i>
+                                <span>回放辩论</span>
+                            </a>
+                            <button class="action-btn delete-btn">
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="history-item">
+                        <div class="history-content">
+                            <div class="history-meta">
+                                <span class="history-date"><i class="far fa-calendar-alt"></i> 2023年5月28日</span>
+                                <span class="history-badge in-progress">进行中</span>
+                            </div>
+                            <h3 class="history-topic">现代教育应注重知识还是能力</h3>
+                            <div class="history-summary">
+                                <div class="debate-progress">
+                                    <div class="progress-label">轮次 3/5</div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 60%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="history-actions">
+                            <a href="debate.html?topic=现代教育应注重知识还是能力&continue=true" class="action-btn primary-action">
+                                <i class="fas fa-arrow-right"></i>
+                                <span>继续辩论</span>
+                            </a>
+                            <button class="action-btn delete-btn">
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="history-pagination">
+                    <button class="pagination-btn" disabled><i class="fas fa-chevron-left"></i></button>
+                    <button class="pagination-btn active">1</button>
+                    <button class="pagination-btn">2</button>
+                    <button class="pagination-btn">3</button>
+                    <button class="pagination-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+
+                <div class="empty-history" style="display: none;">
+                    <div class="empty-icon">
+                        <i class="fas fa-history"></i>
+                    </div>
+                    <h3>暂无历史记录</h3>
+                    <p>您还没有参与过辩论，开始您的第一场辩论吧！</p>
+                    <a href="topic.html" class="btn primary-btn">
+                        <i class="fas fa-plus"></i> 开始辩论
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-comments"></i>
+                    <h2>AI辩论赛</h2>
+                </div>
+                <div class="footer-links">
+                    <h3>快速链接</h3>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="topic.html">开始辩论</a></li>
+                        <li><a href="history.html">历史记录</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>联系我们</h3>
+                    <p><i class="fas fa-envelope"></i> contact@aidebate.com</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 AI辩论赛. 保留所有权利.</p>
+            </div>
+        </footer>
+    </div>
+    
+    <div class="delete-modal" id="deleteModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>确认删除</h3>
+                <button class="close-modal"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <p>您确定要删除此辩论记录吗？此操作无法撤销。</p>
+                <div class="modal-actions">
+                    <button class="btn secondary-btn cancel-btn">取消</button>
+                    <button class="btn danger-btn confirm-delete-btn">确认删除</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/history.js"></script>
+</body>
+</html> 

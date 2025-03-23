@@ -1,0 +1,457 @@
+/* 结果页面样式 */
+.result-main {
+    margin-bottom: 60px;
+}
+
+.result-card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+    padding: 40px;
+    margin-bottom: 50px;
+}
+
+.result-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.result-header h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.debate-topic {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.result-time {
+    color: var(--light-text);
+    font-size: 14px;
+}
+
+.result-time i {
+    margin-right: 5px;
+}
+
+/* 结果摘要 */
+.result-summary {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+@media (max-width: 991px) {
+    .result-summary {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 最终评分 */
+.final-scores {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 25px;
+}
+
+.score-title {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.debater-scores {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.debater-score {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.debater-score.left {
+    background-color: rgba(76, 175, 80, 0.1);
+}
+
+.debater-score.right {
+    background-color: rgba(244, 67, 54, 0.1);
+}
+
+.debater-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.debater-avatar {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: #f1f1f1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.debater-avatar i {
+    font-size: 24px;
+    color: var(--primary-color);
+}
+
+.debater-badge {
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    background-color: #4caf50;
+    color: white;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 10px;
+}
+
+.debater-score.right .debater-badge {
+    background-color: #f44336;
+}
+
+.debater-name {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.score {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.debater-score.left .score {
+    color: #4caf50;
+}
+
+.debater-score.right .score {
+    color: #f44336;
+}
+
+.score-divider {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--light-text);
+    margin: 5px 0;
+}
+
+/* 评委总结 */
+.judge-final-comment {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 25px;
+}
+
+.comment-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.judge-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.judge-avatar i {
+    font-size: 20px;
+    color: var(--primary-color);
+}
+
+.comment-header h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.comment-content p {
+    margin-bottom: 12px;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+/* 合辩共识部分 */
+.synthesis-section {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 30px;
+    margin-bottom: 40px;
+}
+
+.synthesis-title {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 25px;
+    color: var(--primary-color);
+}
+
+.synthesis-title i {
+    margin-right: 8px;
+}
+
+.synthesis-content p {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+.consensus-points {
+    list-style: none;
+}
+
+.consensus-points li {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: flex-start;
+}
+
+.point-number {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 16px;
+    margin-right: 20px;
+}
+
+.consensus-points li p {
+    flex: 1;
+    margin: 0;
+    padding: 10px 0;
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* 结果页面按钮 */
+.result-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* 更多辩题推荐 */
+.more-debates {
+    margin-top: 60px;
+}
+
+.more-debates h3 {
+    font-size: 24px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.debate-recommendations {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+@media (max-width: 768px) {
+    .debate-recommendations {
+        grid-template-columns: 1fr;
+    }
+    
+    .result-actions {
+        flex-direction: column;
+    }
+    
+    .result-actions .btn {
+        width: 100%;
+    }
+}
+
+.debate-recommendation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: var(--box-shadow);
+    transition: all 0.3s ease;
+}
+
+.debate-recommendation:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    background-color: rgba(63, 81, 181, 0.05);
+}
+
+.recommendation-content {
+    flex: 1;
+}
+
+.recommendation-content h4 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: var(--primary-color);
+}
+
+.recommendation-content p {
+    font-size: 14px;
+    color: var(--light-text);
+}
+
+.debate-recommendation i {
+    color: var(--light-text);
+    font-size: 16px;
+    transition: transform 0.3s ease;
+}
+
+.debate-recommendation:hover i {
+    transform: translateX(5px);
+    color: var(--primary-color);
+}
+
+/* 分享模态框 */
+.share-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.modal-header h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.close-modal {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: var(--light-text);
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.modal-body p {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.share-link {
+    display: flex;
+    margin-bottom: 25px;
+}
+
+.share-link input {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px 0 0 4px;
+    font-size: 14px;
+}
+
+.copy-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0 15px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.copy-btn i {
+    margin-right: 5px;
+}
+
+.share-platforms {
+    display: flex;
+    justify-content: space-between;
+}
+
+.share-platform {
+    flex: 1;
+    padding: 10px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    background-color: #f1f1f1;
+    transition: all 0.3s ease;
+}
+
+.share-platform i {
+    font-size: 20px;
+}
+
+.share-platform.wechat {
+    color: #07C160;
+}
+
+.share-platform.weibo {
+    color: #E6162D;
+}
+
+.share-platform.twitter {
+    color: #1DA1F2;
+}
+
+.share-platform:hover {
+    background-color: #e0e0e0;
+} 

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+  <style>
+    .primary-color { fill: #795548; }
+    .secondary-color { fill: #d7ccc8; }
+    .accent-color { fill: #a1887f; }
+    .light-color { fill: #efebe9; }
+    .neutral-color { fill: #455a64; }
+  </style>
+  
+  <!-- 背景 -->
+  <rect width="100" height="100" class="light-color" />
+  
+  <!-- 辩手头部 -->
+  <circle cx="50" cy="40" r="25" class="primary-color" />
+  
+  <!-- 毛发 - 显得稳重 -->
+  <path d="M30,40 C28,30 35,15 50,15 C65,15 72,30 70,40" class="neutral-color" />
+  
+  <!-- 眉毛 - 表示稳重 -->
+  <path d="M37,35 L47,35" stroke="#333" stroke-width="2" fill="none" />
+  <path d="M53,35 L63,35" stroke="#333" stroke-width="2" fill="none" />
+  
+  <!-- 眼睛 -->
+  <circle cx="42" cy="40" r="2" fill="#333" />
+  <circle cx="58" cy="40" r="2" fill="#333" />
+  
+  <!-- 嘴巴 - 严肃 -->
+  <path d="M45,48 L55,48" stroke="#333" stroke-width="1.5" fill="none" />
+  
+  <!-- 身体/传统服装 -->
+  <path d="M30,65 V85 H70 V65 L60,55 H40 Z" class="primary-color" />
+  
+  <!-- 传统领口 -->
+  <path d="M40,55 H60 L58,60 H42 Z" class="accent-color" />
+  <rect x="48" y="60" width="4" height="10" class="accent-color" />
+  
+  <!-- 脖子 -->
+  <rect x="45" y="50" width="10" height="5" fill="#ffccbc" />
+  
+  <!-- 历史书卷图标 -->
+  <rect x="15" y="70" width="16" height="20" rx="2" class="secondary-color" />
+  <path d="M16,71 L30,71 L30,89 L16,89" stroke="#333" stroke-width="0.5" fill="none" />
+  <line x1="20" y1="75" x2="26" y2="75" stroke="#333" stroke-width="0.5" />
+  <line x1="20" y1="78" x2="26" y2="78" stroke="#333" stroke-width="0.5" />
+  <line x1="20" y1="81" x2="26" y2="81" stroke="#333" stroke-width="0.5" />
+  <line x1="20" y1="84" x2="24" y2="84" stroke="#333" stroke-width="0.5" />
+  
+  <!-- 古代立柱图标 - 代表历史和传统 -->
+  <rect x="70" y="70" width="15" height="20" rx="1" class="secondary-color" />
+  <line x1="72" y1="70" x2="72" y2="90" stroke="#333" stroke-width="0.5" />
+  <line x1="75" y1="70" x2="75" y2="90" stroke="#333" stroke-width="0.5" />
+  <line x1="78" y1="70" x2="78" y2="90" stroke="#333" stroke-width="0.5" />
+  <line x1="81" y1="70" x2="81" y2="90" stroke="#333" stroke-width="0.5" />
+  <rect x="68" y="68" width="19" height="3" rx="1" class="primary-color" />
+  <rect x="68" y="89" width="19" height="3" rx="1" class="primary-color" />
+</svg> 

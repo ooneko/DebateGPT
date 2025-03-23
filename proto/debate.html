@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>辩论进行中 - AI辩论赛</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/debate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-comments"></i>
+                <h1>AI辩论赛</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="history.html">历史记录</a></li>
+                    <li><a href="#about">关于我们</a></li>
+                    <li><a href="login.html" class="login-link"><i class="fas fa-user"></i> 登录</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="debate-main">
+            <section class="debate-header">
+                <h2 id="debate-topic">技术发展是否应该被限制</h2>
+                <div class="debate-status">
+                    <div class="progress-bar">
+                        <div class="progress-bar-fill"></div>
+                        <div class="progress-markers">
+                            <div class="marker active" data-round="1">
+                                <span class="marker-label">开场陈述</span>
+                            </div>
+                            <div class="marker" data-round="2">
+                                <span class="marker-label">攻辩环节</span>
+                            </div>
+                            <div class="marker" data-round="3">
+                                <span class="marker-label">自由辩论</span>
+                            </div>
+                            <div class="marker" data-round="4">
+                                <span class="marker-label">结论总结</span>
+                            </div>
+                            <div class="marker" data-round="5">
+                                <span class="marker-label">合辩环节</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="debate-controls">
+                    <button id="prev-round" class="control-btn" disabled>
+                        <i class="fas fa-arrow-left"></i> 上一轮
+                    </button>
+                    <div class="round-info">
+                        <span class="current-round">第1轮</span>
+                        <span class="round-name">开场陈述</span>
+                    </div>
+                    <button id="next-round" class="control-btn">
+                        下一轮 <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+                <div class="voice-controls">
+                    <button id="toggle-voice" class="voice-btn">
+                        <i class="fas fa-volume-up"></i> 播放语音
+                    </button>
+                    <div class="voice-settings">
+                        <div class="voice-setting">
+                            <label for="voice-speed">语速:</label>
+                            <select id="voice-speed">
+                                <option value="0.8">较慢</option>
+                                <option value="1" selected>正常</option>
+                                <option value="1.2">较快</option>
+                                <option value="1.5">快速</option>
+                            </select>
+                        </div>
+                        <div class="voice-setting">
+                            <label for="voice-volume">音量:</label>
+                            <input type="range" id="voice-volume" min="0" max="1" step="0.1" value="0.8">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="debate-content">
+                <section class="debate-arena">
+                    <div class="debaters">
+                        <div class="debater debater-left">
+                            <div class="debater-avatar">
+                                <img id="left-debater-img" src="images/debater-alpha.svg" alt="AI辩手 Alpha">
+                                <div class="debater-position left">正方</div>
+                            </div>
+                            <h3 class="debater-name" id="left-debater-name">理性思考者</h3>
+                        </div>
+                        <div class="debate-vs">VS</div>
+                        <div class="debater debater-right">
+                            <div class="debater-avatar">
+                                <img id="right-debater-img" src="images/debater-beta.svg" alt="AI辩手 Beta">
+                                <div class="debater-position right">反方</div>
+                            </div>
+                            <h3 class="debater-name" id="right-debater-name">批判思想家</h3>
+                        </div>
+                    </div>
+
+                    <div class="debate-dialog-container">
+                        <div class="debate-dialog active" data-round="1">
+                            <div class="speech left">
+                                <div class="speech-header">
+                                    <div class="avatar">
+                                        <i class="fas fa-robot"></i>
+                                    </div>
+                                    <div class="speaker-info">
+                                        <div class="speaker-name">AI辩手 Alpha</div>
+                                        <div class="speaker-position">正方</div>
+                                    </div>
+                                </div>
+                                <div class="speech-content">
+                                    <p>尊敬的评委、对方辩友，大家好。今天我方将论证"技术发展应受到必要限制"的观点。</p>
+                                    <p>技术的发展固然推动人类文明进步，但无限制的技术发展可能带来不可预见的风险。首先，某些技术可能对生态环境造成不可逆转的破坏；其次，人工智能等前沿技术若无伦理边界，可能带来隐私、安全等社会问题；最后，技术鸿沟可能加剧社会不平等。</p>
+                                    <p>因此，我们认为技术发展需要适当的法律法规、伦理标准和社会监督来引导，确保其朝着有利于全人类福祉的方向发展。这种限制不是阻碍创新，而是为技术发展提供更健康的生态系统。</p>
+                                </div>
+                            </div>
+                            <div class="speech right">
+                                <div class="speech-header">
+                                    <div class="avatar">
+                                        <i class="fas fa-robot"></i>
+                                    </div>
+                                    <div class="speaker-info">
+                                        <div class="speaker-name">AI辩手 Beta</div>
+                                        <div class="speaker-position">反方</div>
+                                    </div>
+                                </div>
+                                <div class="speech-content">
+                                    <p>尊敬的评委、对方辩友，大家好。我方坚定地认为"技术发展不应被限制"。</p>
+                                    <p>人类文明的进步史就是技术不断突破限制的历史。从印刷术到互联网，每一次重大技术突破都曾面临质疑与限制，但正是这些"无限制"的探索带来了人类文明的飞跃。限制技术发展意味着限制人类潜能的释放，可能错失解决全球性问题的机会。</p>
+                                    <p>技术本身是中立的，问题不在于技术本身，而在于如何使用技术。我们应该关注技术应用的伦理和教育，而非限制技术发展本身。真正负责任的做法是拥抱创新，同时发展应对技术挑战的能力和制度。</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 其他轮次的对话内容会通过JavaScript动态加载 -->
+                    </div>
+                </section>
+
+                <section class="judge-panel">
+                    <div class="judge-header">
+                        <div class="judge-avatar">
+                            <i class="fas fa-gavel"></i>
+                        </div>
+                        <h3>AI评委点评</h3>
+                    </div>
+
+                    <div class="judge-comments active" data-round="1">
+                        <div class="comment">
+                            <p>双方辩手在开场陈述中展现了扎实的理论基础和清晰的逻辑思路。</p>
+                            <p>正方Alpha强调了技术发展需要适当限制以避免潜在风险，论点全面涵盖环境、伦理和社会层面，论证有理有据。</p>
+                            <p>反方Beta则从历史角度切入，强调技术突破对人类文明的推动作用，并指出技术中立性，将问题转向应用伦理而非技术本身，思路开阔。</p>
+                            <p>建议正方在后续辩论中进一步明确"限制"的具体边界；反方可以提供更多技术自由发展带来积极成果的实例。</p>
+                        </div>
+                    </div>
+
+                    <div class="score-card">
+                        <h4>第1轮评分</h4>
+                        <div class="scores">
+                            <div class="score-item">
+                                <div class="debater-side">正方</div>
+                                <div class="score-bar-container">
+                                    <div class="score-bar left" style="width: 85%;">
+                                        <span>8.5</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="score-item">
+                                <div class="debater-side">反方</div>
+                                <div class="score-bar-container">
+                                    <div class="score-bar right" style="width: 83%;">
+                                        <span>8.3</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="score-dimensions">
+                            <div class="dimension">
+                                <span class="dimension-label">逻辑性</span>
+                                <div class="dimension-bars">
+                                    <div class="dimension-left" style="width: 90%"></div>
+                                    <div class="dimension-right" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="dimension">
+                                <span class="dimension-label">论据支持</span>
+                                <div class="dimension-bars">
+                                    <div class="dimension-left" style="width: 80%"></div>
+                                    <div class="dimension-right" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="dimension">
+                                <span class="dimension-label">表达能力</span>
+                                <div class="dimension-bars">
+                                    <div class="dimension-left" style="width: 85%"></div>
+                                    <div class="dimension-right" style="width: 80%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="debate-actions">
+                <button id="share-debate" class="action-btn">
+                    <i class="fas fa-share-alt"></i> 分享辩论
+                </button>
+                <button id="save-debate" class="action-btn">
+                    <i class="fas fa-bookmark"></i> 保存记录
+                </button>
+                <button id="new-debate" class="action-btn primary">
+                    <i class="fas fa-plus"></i> 新辩题
+                </button>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-comments"></i>
+                    <h2>AI辩论赛</h2>
+                </div>
+                <div class="footer-links">
+                    <h3>快速链接</h3>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="topic.html">开始辩论</a></li>
+                        <li><a href="history.html">历史记录</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>联系我们</h3>
+                    <p><i class="fas fa-envelope"></i> contact@aidebate.com</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 AI辩论赛. 保留所有权利.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/debate.js"></script>
+</body>
+</html> 
